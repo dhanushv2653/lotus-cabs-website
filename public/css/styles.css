@@ -973,3 +973,83 @@ body {
     overflow-x: hidden;
   }
 }
+@media (max-width: 576px) {
+
+  /* Navbar height */
+  .navbar {
+    padding: 10px 12px !important;
+  }
+
+  /* Force proper flex layout */
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Hamburger → LEFT */
+  .navbar-toggler {
+    order: 1;
+    border: none;
+    padding: 4px;
+  }
+
+  /* BRAND → CENTER */
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 6px;
+  }
+
+  .navbar-logo {
+    width: 26px;
+    height: 26px;
+  }
+
+  .brand-text {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* PHONE BUTTON → RIGHT (ICON ONLY) */
+  .btn-phone {
+    order: 3;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #013E37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  }
+
+  /* Hide phone number + bootstrap icon */
+  .btn-phone i {
+    display: none;
+  }
+
+  /* Phone SVG size */
+  .btn-phone img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Hide phone button inside menu */
+  .navbar-collapse .btn-phone {
+    display: none;
+  }
+
+  /* Menu spacing */
+  .navbar-collapse {
+    margin-top: 12px;
+  }
+
+  .navbar .nav-link {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
