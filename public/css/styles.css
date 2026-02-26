@@ -1,0 +1,1133 @@
+section {
+  scroll-margin-top: 100px;
+}
+
+.card {
+  border-radius: 14px;
+}
+
+h3 {
+  letter-spacing: -0.3px;
+}
+.hero-section {
+  min-height: 600px;
+  padding-top: 50px;   
+  padding-bottom: 80px;
+}
+.hero-section h1 {
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.15;
+  margin: 0; 
+  font-weight: 700;  
+}
+.hero-section p {
+  font-size: clamp(10px, 3vw, 20px);
+  max-width: 460px;
+  margin: 0;
+  line-height: 1.6;
+}
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 282px;
+  height: 64px;
+
+  background-color: #013E37; /* bright WhatsApp green */
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border-radius: 10px;
+  border: none;
+
+  text-decoration: none;
+
+  /* shadow */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+  /* smooth interaction */
+  transition: 
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-whatsapp i {
+  font-size: 22px;
+}
+
+/* hover state */
+.btn-whatsapp:hover {
+  background-color: #1EBE5D; /* slightly darker */
+  color: #ffffff;
+
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+  transform: translateY(-2px);
+}
+.btn-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  width: 235px;
+  height: 62px;
+
+  background-color: #013E37; /* dark green */
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+
+  /* shadow like screenshot */
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* hover → lime WhatsApp green */
+.btn-phone:hover {
+  background-color: #25D366; /* lime green */
+  color: #ffffff;
+
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+  transform: translateY(-2px);
+}
+
+/* active (click feel) */
+.btn-phone:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.navbar .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+
+  color: #000000 !important;
+  padding: 0;
+
+  transition: color 0.2s ease;
+}
+
+/* Hover state */
+.navbar .nav-link:hover {
+  color: #013e37 !important;
+}
+.hero-section {
+  min-height: 600px;
+  padding-top: 50px;   /*  navbar gap */
+  padding-bottom: 80px;
+}
+.btn-phone i {
+  display: none;
+}
+.google-reviews {
+  display: flex;
+  align-items: center;
+  gap: 16px;                 /* exact Figma gap */
+  margin-top: 25px;
+}
+
+/* Single image asset */
+.google-avatars {
+  height: 54px;              /* from Figma */
+  width: auto;
+  display: block;
+}
+
+/* Text block */
+.review-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.review-text .rating {
+  font-size: 20px;           /* Figma */
+  font-weight: 500;
+  color: #111827;
+}
+
+.review-text .source {
+  font-size: 14px;
+  color: #999999;
+}
+
+
+.hero-image {
+  display: block;
+  width: clamp(350px, 30vw, 496px);
+  height: clamp(400px, 40vw, 500px);
+  object-fit: contain;
+
+  /* keep original transparent shape */
+  background: transparent;
+
+}
+.brand-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;                 /* space between logo & text */
+  height: 66px;              
+  text-decoration: none;
+}
+
+/* Logo icon */
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+/* Brand text */
+.brand-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #013e37;            
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-section .col-lg-6:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+/* WHY CHOOSE US */
+.why-choose-us {
+  padding: 80px 0;
+}
+
+/* Badge */
+.why-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #ECFBE0;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 122px 24px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.why-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+
+  /* 👇 auto scales with viewport */
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: clamp(44px, 5vw, 76px);
+
+  max-width: 977px;
+  margin: 0 auto 12px;
+
+  text-align: center;
+  color: #111827;
+}
+/* Description */
+.why-desc {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #6b7280;
+}
+.hl-safety {
+  background: url("/assets/decorative-components/highlghter\ 1.png") no-repeat center / 100% 100%;
+}
+
+.hl-comfort {
+  background: url("/assets/decorative-components/highlighter\ 2.png") no-repeat center / 100% 100%;
+}
+/* Cards */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 284px 284px;
+  gap: 24px;
+
+  grid-template-areas:
+    "office support outstation"
+    "office airport outstation";
+}
+.office     { grid-area: office; }
+.support    { grid-area: support; }
+.airport    { grid-area: airport; }
+.outstation { grid-area: outstation; }
+/* Tall cards (left & right) */
+
+
+/* Card base */
+.why-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+/* Images */
+.why-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.why-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.25),
+    transparent
+  );
+
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.why-overlay h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.why-overlay p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.why-overlay p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+}
+.customer-stories {
+  padding: 90px 0;
+  background-color: #F9F9F9;
+}
+
+/* Title */
+.customer-stories__title {
+  font-size: clamp(28px, 3vw, 56px);
+  font-weight: 700;
+  color: #023E37;
+}
+
+/* Description */
+.customer-stories__desc {
+  font-size: clamp(10px, 2.5vw, 20px);
+  line-height: 1.7;
+  color: #000000;
+  max-width: 720px;
+}
+
+/* Card */
+.story-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Image */
+.story-card__image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Content */
+.story-card__content h4 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.story-card__content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Author */
+.story-author span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Highlight */
+.highlight {
+  background: #e8fbd9;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Navigation buttons */
+.story-nav {
+  position: absolute;
+  bottom: 24px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Icon image */
+.story-nav img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Positioning */
+.story-nav--prev {
+  right: 72px;
+}
+
+.story-nav--next {
+  right: 24px;
+}
+
+/* Hover animation */
+.story-nav:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Click (active) feel */
+.story-nav:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+* Section wrapper */
+.choose-car {
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+/* Card base */
+.car-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+.car-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* Body */
+.car-card__body {
+  padding: 22px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.car-card__body h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.car-card__body p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+/* Meta list */
+.car-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #111827;
+}
+
+.car-meta li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+/* Section wrapper */
+.book-ride {
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+/* Main card */
+.book-ride__card {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  height: 540px; /* matches Figma */
+}
+
+/* Background image */
+.book-ride__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark overlay */
+.book-ride__overlay {
+  position: absolute;
+  inset: 0;
+  padding: 80px; /* 🔥 exact spacing from Figma */
+  background: rgba(0, 0, 0, 0.24);
+
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 760px;
+  
+}
+
+/* Title */
+.book-ride__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+/* Description */
+.book-ride__desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+/* Buttons row */
+.book-ride__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;          /* ✅ THIS FIXES IT */
+}
+
+
+/* Email button */
+.btn-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 64px;
+  padding: 0 26px;
+
+  background-color: #ffffff;
+  color: #013E37;
+
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transition: all 0.25s ease;
+}
+
+.btn-email i {
+  font-size: 20px;
+}
+
+.btn-email:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+}
+/* Footer base */
+.site-footer {
+  background-color: #1f2937;
+  padding-top: 80px;
+}
+
+/* Top section spacing */
+.footer-top {
+  padding-bottom: 50px;
+}
+
+/* Logo */
+.footer-logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Description */
+.footer-desc {
+  max-width: 420px;
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 14px 0 18px;
+}
+
+/* Contact lines */
+.footer-contact {
+  font-size: 14px;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+/* Headings */
+.footer-heading {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Divider */
+.footer-divider {
+  border-color: #374151;
+  margin: 0;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Mobile */
+
+/* About us */
+/* =========================
+   ABOUT HERO
+========================= */
+
+.about-hero {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+/* Image sizing handled here (not reused) */
+.about-hero__image-wrap {
+  width: 100%;
+  max-width: 520px;   /* matches Figma density */
+}
+
+.about-hero__image-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/*what defines */
+/* =========================
+   DEFINES US
+========================= */
+
+.defines-us {
+  padding: 80px 0;
+  background: #fafafa;
+}
+
+/* Card */
+.defines-card {
+  position: relative;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.defines-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.defines-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.3),
+    transparent
+  );
+
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.defines-overlay h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.defines-overlay p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+.booking-panel .why-badge {
+  font-size: clamp(12px, 1.4vw, 16px);
+  padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.4vw, 14px);
+}
+
+/* Title responsive ONLY in booking */
+.booking-panel .why-title {
+  font-size: clamp(24px, 3.5vw, 42px);
+  line-height: clamp(32px, 4.2vw, 54px);
+  text-align: left;
+}
+
+/* Description responsive ONLY in booking */
+.booking-panel .why-desc {
+  font-size: clamp(14px, 1.4vw, 16px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Booking inputs */
+.booking-panel .form-control {
+  height: clamp(48px, 5vw, 56px);
+  font-size: clamp(14px, 1.3vw, 16px);
+  border-radius: 10px;
+}
+
+/* Booking button */
+.btn-book {
+  background-color: #013E37;
+  color: #ffffff;
+  height: clamp(48px, 5vw, 56px);
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.btn-book:hover {
+  background-color: #25D366;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+.booking-image-full {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.booking-image-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Desktop full stretch */
+@media (min-width: 992px) {
+  .booking-image-full {
+    height: 600px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section .container {
+    max-width: 1400px;   
+  }
+}
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-ride__card {
+    height: auto;
+  }
+
+  .book-ride__overlay {
+    padding: 40px 24px;
+    max-width: 100%;
+  }
+
+  .book-ride__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .story-card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .story-card__image img {
+    height: 220px;
+  }
+}
+@media (max-width: 992px) {
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "office support"
+      "airport outstation";
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: none;   /* 🔥 reset areas */
+    grid-auto-rows: unset;       /* 🔥 remove block logic */
+    gap: 16px;
+  }
+
+  .why-card {
+             /* 👈 LANDSCAPE HEIGHT */
+    aspect-ratio: 16 / 9;        /* 👈 FORCE LANDSCAPE */
+    border-radius: 18px;
+  }
+
+  .why-card img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+
+  .why-overlay {
+    padding: 16px;
+  }
+
+  .why-overlay h5 {
+    font-size: 16px;
+  }
+
+ .why-overlay p {
+    display: none;
+}
+@media (max-width: 1200px) {
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "office support"
+      "airport outstation";
+  }
+
+  .why-card {
+    aspect-ratio: 4 / 3; /* balanced rectangle */
+  }
+}
+.why-overlay p strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+@media (max-width: 576px) {
+
+  /* Reduce overall padding */
+  .book-ride {
+    padding: 50px 0;
+  }
+
+  .book-ride__card {
+    height: auto;
+    border-radius: 24px;
+  }
+
+  .book-ride__overlay {
+    padding: 32px 24px;
+    max-width: 100%;
+  }
+
+  /* Title smaller & tighter */
+  .book-ride__title {
+    font-size: clamp(20px, 6vw, 26px);
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  /* ❌ REMOVE PARAGRAPH */
+  .book-ride__desc {
+    display: none;
+  }
+
+  /* Stack buttons */
+  .book-ride__actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* WhatsApp button smaller */
+  .btn-whatsapp {
+    width: 100%;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  /* Email button smaller */
+  .btn-email {
+    width: 100%;
+    height: 52px;
+    font-size: 15px;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
+
+  .site-footer {
+    padding-top: 4px;
+  }
+
+  /* Hide long text */
+  .footer-desc,
+  .footer-links,
+  .footer-heading {
+    display: none;
+  }
+
+  /* Center brand */
+  .site-footer .brand-wrap {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  /* Center contacts */
+  .footer-contact {
+    font-size: 13px;
+  }
+
+  /* Bottom bar tighter */
+  .footer-bottom {
+    flex-direction: column;
+    align-items:start;
+    font-size:12px;
+  }
+}
+@media (max-width: 576px) {
+
+  footer {
+    padding-top: 32px !important;
+  }
+
+  footer .row.pb-4 {
+    padding-bottom: 16px !important;
+  }
+
+  footer hr {
+    margin: 12px 0 !important;
+  }
+
+  footer .footer-bottom {
+    padding: 12px 0 !important;
+    font-size: 12px;
+  }
+
+  /* Reduce spacing between brand + contact */
+  footer .brand-wrap {
+    margin-bottom: 12px;
+  }
+
+  footer p {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 576px) {
+
+  /* =========================
+     1️⃣ HERO IMAGE — REMOVE
+  ========================= */
+  .hero-section .col-lg-6:last-child {
+    display: none;
+  }
+
+  /* =========================
+     2️⃣ HERO SPACING — TIGHTEN
+  ========================= */
+  .hero-section {
+    padding-top: 32px;     /* less gap from navbar */
+    padding-bottom: 36px;  /* closer to next section */
+    min-height: unset;
+  }
+
+  /* =========================
+     3️⃣ LOGO TEXT — REDUCE SIZE
+  ========================= */
+  .brand-text {
+    font-size: 16px;   /* smaller, calmer */
+    font-weight: 600;
+  }
+
+  /* =========================
+     4️⃣ DROPDOWN TEXT — REDUCE SIZE
+  ========================= */
+  .navbar .nav-link {
+    font-size: 16px;   /* consistent & readable */
+    font-weight: 500;
+    padding: 6px 0;
+  }
+
+  /* Phone button text — match dropdown */
+  .navbar-nav .btn-phone {
+    font-size: 16px;
+  }
+
+  /* =========================
+     5️⃣ HERO CONTENT ALIGNMENT
+  ========================= */
+  .hero-section .col-lg-6:first-child {
+    text-align: center;
+  }
+
+  .hero-section p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .google-reviews {
+    justify-content: center;   /* keep it centered */
+    margin-top: 20px;          /* tighter spacing from button */
+    gap: 12px;                 /* slightly tighter */
+  }
+
+  /* Reduce avatar size */
+  .google-avatars {
+    height: 44px;              /* smaller, calmer */
+  }
+
+  /* Reduce text size */
+  .review-text .rating {
+    font-size: 16px;           /* down from 20px */
+    font-weight: 500;
+  }
+
+  .review-text .source {
+    font-size: 12px;           /* subtle secondary text */
+  }
+  .hero-section p {
+  font-size: 14px;
+}
+}
+@media (max-width: 768px) {
+
+  /* hide image only on booking page */
+  .about-hero .col-lg-6:first-child {
+    display: none;
+  }
+
+  /* make booking full width */
+  .booking-panel {
+    width: 100%;
+  }
+
+  /* tighten spacing */
+  .about-hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
