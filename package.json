@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^1.13.5",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
@@ -19,5 +20,8 @@
     "mongoose": "^9.2.1",
     "nodemailer": "^8.0.1",
     "twilio": "^5.12.2"
+=======
+    "express": "^5.2.1"
+>>>>>>> a491cc6bce7ef9f96dec6a8eddc51cd620a3e1fa
   }
 }

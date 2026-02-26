@@ -753,6 +753,7 @@ body {
   line-height: 1.4;
   opacity: 0.9;
 }
+<<<<<<< HEAD
 .booking-panel .why-badge {
   font-size: clamp(12px, 1.4vw, 16px);
   padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.4vw, 14px);
@@ -817,6 +818,8 @@ body {
     height: 600px;
   }
 }
+=======
+>>>>>>> a491cc6bce7ef9f96dec6a8eddc51cd620a3e1fa
 @media (min-width: 1200px) {
   .hero-section .container {
     max-width: 1400px;   
@@ -1112,6 +1115,7 @@ body {
   .hero-section p {
   font-size: 14px;
 }
+<<<<<<< HEAD
 }
 @media (max-width: 768px) {
 
@@ -1130,4 +1134,6 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+=======
+>>>>>>> a491cc6bce7ef9f96dec6a8eddc51cd620a3e1fa
 }
