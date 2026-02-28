@@ -24,24 +24,24 @@
   rel="stylesheet"
 >
 <!-- Css Link -->
- <link rel="stylesheet" href="public/css/styles.css">
-<!-- Capcha-->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="stylesheet" href="public/css/styles.css">
 </head>
 
 <body>
 <!-- NAVBAR START -->
-<nav class="navbar navbar-expand-lg bg-white shadow py-3">
+<nav class="navbar navbar-expand-lg bg-white shadow ">
   <div class="container">
 
     <!-- Logo -->
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
   <img
-    src="assets/icons/lotus-flower-svgrepo-com 1.svg"
+    src="assets/icons/lc logo text 1.png"
     alt="Lotus Cabs"
     class="navbar-logo"
+    
+    
   />
-    <span class="brand-text">Lotus Cabs</span>
+    <span class="brand-text"></span>
 </a>
 
     <!-- Menu -->
@@ -58,6 +58,7 @@
       <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="fleet.html">Fleet</a></li>
         <li class="nav-item"><a class="nav-link" href="booking.html">Book Ride</a></li>
         <li class="nav-item">
           <a class="btn btn-phone ms-lg-3 " href="tel:+919845002690">
@@ -80,7 +81,7 @@
         <div class="col-lg-6 booking-panel">
             
           <div class="booking-image-full">
-            <img src="assets/bookride.jpeg" alt="book your ride">
+            <img src="assets/hero-section/car parking.jpg" alt="book your ride">
           </div>
         </div>
 
@@ -95,13 +96,40 @@
           Enter your trip details and our team will contact you shortly to confirm your ride.
           </p>
          <form id="bookingForm" class="mt-4">
+<!-- Name -->
+  <input
+    type="text"
+    id="customerName"
+    name="name"
+    class="form-control mb-3"
+    placeholder="Your Name"
+    required
+  >
 
+  <!-- Mobile -->
+  <input
+    type="tel"
+    id="mobile"
+    name="mobile"
+    class="form-control mb-3"
+    placeholder="Mobile Number"
+    required
+  >
   <!-- Ride Type -->
   <select id="rideType" name="rideType" class="form-control mb-3" required>
     <option value="">Ride Type</option>
     <option value="local">Local (within city)</option>
     <option value="outstation">Outstation</option>
     <option value="airport">Airport Transfer</option>
+  </select>
+
+  <!-- Vehicle -->
+  <select id="vehicle" name="vehicle" class="form-control mb-3" required>
+    <option value="">Vehicle Type</option>
+  <option value="Luxury Executive">Luxury</option>
+  <option value="Comfort Sedan">Sedan</option>
+  <option value="Spacious SUV">SUV</option>
+  <option value="Premium Group Travel">Premium Group Travel</option>
   </select>
 
   <!-- Pickup City -->
@@ -131,14 +159,16 @@
   >
 
   <!-- Date -->
-  <input
-    type="date"
-    id="rideDate"
-    name="date"
-    class="form-control mb-3"
-    required
-  >
-
+   <label for="rideDate" class="form-label">Date</label>
+ <input 
+  type="date"
+  id="rideDate"
+  name="date"
+  class="form-control mb-3"
+  min=""
+  required
+>
+<small class="text-muted">Please select pickup time</small>
   <!-- Time -->
   <input
     type="time"
@@ -148,34 +178,9 @@
     required
   >
 
-  <!-- Vehicle -->
-  <select id="vehicle" name="vehicle" class="form-control mb-3" required>
-    <option value="">Vehicle Type</option>
-  <option value="Luxury Executive">Luxury</option>
-  <option value="Comfort Sedan">Sedan</option>
-  <option value="Spacious SUV">SUV</option>
-  <option value="Premium Group Travel">Premium Group Travel</option>
-  </select>
 
-  <!-- Name -->
-  <input
-    type="text"
-    id="customerName"
-    name="name"
-    class="form-control mb-3"
-    placeholder="Your Name"
-    required
-  >
 
-  <!-- Mobile -->
-  <input
-    type="tel"
-    id="mobile"
-    name="mobile"
-    class="form-control mb-3"
-    placeholder="Mobile Number"
-    required
-  >
+  
 
   <!-- Notes (optional) -->
   <textarea
@@ -202,7 +207,8 @@
 </section>
  
 <!--Footer-->
-<footer class="site-footer text-light">
+
+<footer class="site-footer ">
   <div class="container">
 
     <!-- TOP -->
@@ -212,11 +218,11 @@
       <div class="col-lg-6 mb-4 mb-lg-0">
         <a href="/" class="brand-wrap mb-3 d-inline-flex">
           <img
-            src="assets/icons/lotus-flower-svgrepo-com 1.svg"
+            src="assets/icons/lc logo text 1.png"
             alt="Lotus Cabs"
             class="brand-logo footer-logo"
           />
-          <span class="brand-text text-white">Lotus Cabs</span>
+          <span class="brand-text text-white"></span>
         </a>
 
         <p class="footer-desc">
@@ -240,8 +246,6 @@
             <h6 class="footer-heading">Company</h6>
             <ul class="footer-links">
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Feedback</a></li>
-              <li><a href="#">Coverage</a></li>
             </ul>
           </div>
 
@@ -249,7 +253,6 @@
             <h6 class="footer-heading">Legal</h6>
             <ul class="footer-links">
               <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Feedback</a></li>
             </ul>
           </div>
 
@@ -274,7 +277,8 @@
 <script>
   const requiredFields = ["pickupCity", "dropCity", "name", "mobile"];
 const captchaContainer = document.getElementById("captchaContainer");
-
+const today = new Date().toISOString().split("T")[0];
+document.getElementById("rideDate").setAttribute("min", today);
 function checkRequiredFields() {
   let allFilled = true;
 
@@ -297,6 +301,18 @@ requiredFields.forEach(id => {
   const field = document.querySelector(`[name="${id}"]`);
   field.addEventListener("input", checkRequiredFields);
 });
+function convertTo12HourFormat(time24) {
+  if (!time24) return "";
+
+  const [hours, minutes] = time24.split(":");
+  let hour = parseInt(hours);
+  const ampm = hour >= 12 ? "PM" : "AM";
+
+  hour = hour % 12;
+  hour = hour ? hour : 12; // 0 becomes 12
+
+  return `${hour}:${minutes} ${ampm}`;
+}
 document.getElementById("bookingForm").addEventListener("submit", async function(e) {
   e.preventDefault();
 
@@ -306,6 +322,7 @@ document.getElementById("bookingForm").addEventListener("submit", async function
 
   const formData = new FormData(this);
   const data = Object.fromEntries(formData.entries());
+  data.time = convertTo12HourFormat(data.time);
 
   console.log("Form Data:", data);
 

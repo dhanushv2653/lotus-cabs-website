@@ -29,19 +29,19 @@
 
 <body>
 <!-- NAVBAR START -->
-<nav class="navbar navbar-expand-lg bg-white shadow py-3">
+<nav class="navbar navbar-expand-lg bg-white shadow ">
   <div class="container">
 
     <!-- Logo -->
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
   <img
-    src="assets/icons/lotus-flower-svgrepo-com 1.svg"
+    src="assets/icons/lc logo text 1.png"
     alt="Lotus Cabs"
     class="navbar-logo"
     
     
   />
-    <span class="brand-text">Lotus Cabs</span>
+    <span class="brand-text"></span>
 </a>
 
     <!-- Menu -->
@@ -58,6 +58,7 @@
       <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="fleet.html">Fleet</a></li>
         <li class="nav-item"><a class="nav-link" href="booking.html">Book Ride</a></li>
         <li class="nav-item">
           <a class="btn btn-phone ms-lg-3 " href="tel:+919845002690">
@@ -73,56 +74,91 @@
 </nav>
 <!-- NAVBAR END -->
 <!-- HERO SECTION START -->
-<section class="hero-section">
-  <div class="container h-100">
-    <div class="row align-items-center h-100 gy-5">
+<section class="hero-slider">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-    <!-- LEFT CONTENT -->
-    <div class="col-lg-6">
-      <h1 class="fw-bold display-4 lh-sm">
-        Reach your destination on time with <span class="hl hl-safety">safety</span>
-  and
-  <span class="hl hl-comfort">comfort</span><br />
-      </h1>
+    <div class="carousel-inner">
 
-      <p class="text-muted mt-4" style="max-width: 460px;">Professional Car Hire Services with consistent quality and direct support for all your intercity and local travel needs.
-        
-      </p>
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="assets/hero-section/airport terminal.png" class="d-block w-100 hero-bg" alt="Airport Transfer">
+        <div class="hero-overlay"></div>
 
-      <div class="d-flex gap-3 mt-4">
-        <a
-          href="https://wa.me/919845002690"
-          class="btn btn-whatsapp px-4 py-2"
-        >
-          <i class="bi bi-whatsapp"></i> Book on WhatsApp
-        </a>
+        <div class="carousel-caption">
+          <h1 class="fw-bold display-4">
+            Luxury Airport Transfers <br>
+            With <span class="text-danger">Safety</span> & Comfort
+          </h1>
+          <p class="mt-3">
+            Professional Car Hire Services for Airport & Corporate Travel
+          </p>
+
+          <a href="booking.html" class="btn btn-danger btn-lg mt-3 px-4">
+            Book Your Ride
+          </a>
+        </div>
       </div>
-      <div class="google-reviews">
-  <img
-    src="assets/icons/google review.png"
-    alt="Google reviewers"
-    class="google-avatars"
-  />
 
-  <div class="review-text">
-    <span class="rating">4.8 rating</span>
-    <span class="source">On Google</span>
-  </div>
-</div>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="assets/hero-section/plane car 1.jpg" class="d-block w-100 hero-bg" alt="Luxury Fleet">
+        <div class="hero-overlay"></div>
+        <div class="carousel-caption">
+          <h1 class="fw-bold display-4">
+            Executive Fleet <br>
+            Premium Experience
+          </h1>
+          <a href="booking.html" class="btn btn-danger btn-lg mt-3 px-4">
+            Explore Fleet
+          </a>
+        </div>
+      </div>
+       <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="assets/hero-section/plane car 2.jpg" class="d-block w-100 hero-bg" alt="Luxury Fleet">
+        <div class="hero-overlay"></div>
+        <div class="carousel-caption">
+          <h1 class="fw-bold display-4">
+            Executive Fleet <br>
+            Premium Experience
+          </h1>
+          <a href="booking.html" class="btn btn-danger btn-lg mt-3 px-4">
+            Explore Fleet
+          </a>
+        </div>
+      </div>
+
     </div>
-
-    <!-- RIGHT IMAGE -->
-    <div class="col-lg-6">
-     <div class="col-lg-6 text-center">
-  <img
-    src="assets/right image collection.png"
-    alt="Luxury cab"
-    class="hero-image"
-  />
-</div>
-
   </div>
 </section>
+<!-- BRAND SLIDER -->
+ 
+<!-- BRAND STRIP START -->
+<section class="brand-section">
+  <div class="brand-wrapper">
+    <div class="brand-track">
+
+      <!-- Car Brands -->
+      <img src="assets/icons/audi.png" alt="Audi">
+      <img src="assets/icons/bmw.png" alt="BMW">
+      <img src="assets/icons/mercedes.png" alt="Mercedes">
+      <img src="assets/icons/toyota.png" alt="Toyota">
+      <img src="assets/icons/Honda.png" alt="Honda">
+
+      <!-- Duplicate for smooth infinite scroll -->
+      <img src="assets/icons/audi.png" alt="Audi">
+      <img src="assets/icons/bmw.png" alt="BMW">
+      <img src="assets/icons/mercedes.png" alt="Mercedes">
+      <img src="assets/icons/toyota.png" alt="Toyota">
+       <img src="assets/icons/Honda.png" alt="Honda">
+
+    </div>
+  </div>
+</section>
+<p class="brand-note text-center mb-3">
+  We provide vehicles from the following brands. We are not affiliated with or endorsed by these manufacturers.
+</p>
+<!-- BRAND STRIP END -->
 <!-- WHY CHOOSE US START -->
 <section class="why-choose-us">
   <div class="container">
@@ -181,140 +217,8 @@
 </div>
 
 </div>
- <!-- CUSTOMER STORIES START -->
-<section class="customer-stories">
-  <div class="container">
-
-    <!-- HEADER -->
-    <div class="row align-items-start mb-5 gy-3">
-      <div class="col-lg-4">
-        <h2 class="customer-stories__title">Customer Stories</h2>
-      </div>
-
-      <div class="col-lg-8">
-        <p class="customer-stories__desc">
-          From early morning pickups to long distance journeys these experiences reflect how we work every day.Customers share what mattered to them being on time feeling safe and having someone dependable to call.
-        </p>
-      </div>
-    </div>
-
-    <!-- CAROUSEL -->
-    <div
-      id="customerStoriesCarousel"
-      class="carousel slide"
-      data-bs-ride="false"
-      data-bs-touch="false"
-    >
-      <div class="carousel-inner">
-
-        <!-- CARD 1 -->
-        <div class="carousel-item active">
-          <div class="story-card">
-            <div class="story-card__image">
-              <img src="assets/testimony images/customer-1.png" alt="Customer 1">
-            </div>
-
-            <div class="story-card__content">
-              <h4>
-                Drivers are very
-                <span class="highlight">familiar with local routes.</span>
-              </h4>
-
-              <p>
-                “The drivers are polite, professional and very familiar with
-                local routes. Every ride feels calm, well planned and safe.
-                Compared to booking randomly, this service gives much more
-                confidence and peace of mind.”
-              </p>
-
-              <div class="story-author">
-                <strong>Sharon G.</strong><br>
-                <span>Account Executive </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="carousel-item">
-          <div class="story-card">
-            <div class="story-card__image">
-              <img src="assets/testimony images/customer-2.png" alt="Customer 2">
-            </div>
-
-            <div class="story-card__content">
-              <h4>
-                Always
-                <span class="highlight">on time and reliable.</span>
-              </h4>
-
-              <p>
-                “I never worry about delays anymore. Pickups are punctual,
-                communication is clear and the service is extremely reliable.”
-              </p>
-
-              <div class="story-author">
-                <strong>Rahul K.</strong><br>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="carousel-item">
-          <div class="story-card">
-            <div class="story-card__image">
-              <img src="assets/testimony images/customer-3.png" alt="Customer 3">
-            </div>
-
-            <div class="story-card__content">
-              <h4>
-                Safe rides with
-                <span class="highlight">professional drivers.</span>
-              </h4>
-
-              <p>
-                “The professionalism and calm driving style really stand out.
-                I feel safe even on long night journeys.”
-              </p>
-
-              <div class="story-author">
-                <strong>Suresh S.</strong><br>
-                <span>HR Consultant</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <button
-  class="story-nav story-nav--prev"
-  type="button"
-  data-bs-target="#customerStoriesCarousel"
-  data-bs-slide="prev"
-  aria-label="Previous story"
->
-  <img src="assets/icons/arrow-1.png" alt="Previous">
-</button>
-
-<button
-  class="story-nav story-nav--next"
-  type="button"
-  data-bs-target="#customerStoriesCarousel"
-  data-bs-slide="next"
-  aria-label="Next story"
->
-  <img src="assets/icons/arrow-2.png" alt="Next">
-</button>
-    </div>
-  </div>
+ 
 </section>
-  </div>
-</section>
-   <!-- CUSTOMER STORIES END --> 
-
    <!-- VEHICLE CATEGORIES START -->
 <!-- CHOOSE YOUR CAR START -->
 <section class="choose-car">
@@ -322,7 +226,7 @@
 
     <!-- Section Header (same template as Why Choose Us) -->
     <div class="text-center mb-5">
-      <span class="why-badge">Our Offers</span>
+      <span class="why-badge">Fleet</span>
 
       <h3 class="why-title">
         Choose the car that<br />
@@ -438,7 +342,7 @@
     <div class="book-ride__card">
 
       <img
-        src="assets/Book.jpg"
+        src="assets/hero-section/cars parked.jpg"
         alt="Book your ride"
         class="book-ride__bg"
       />
@@ -483,7 +387,7 @@
 
 <!-- TRUST & ACCOUNTABILITY SECTION END -->
 
-<footer class="site-footer text-light">
+<footer class="site-footer ">
   <div class="container">
 
     <!-- TOP -->
@@ -493,11 +397,11 @@
       <div class="col-lg-6 mb-4 mb-lg-0">
         <a href="/" class="brand-wrap mb-3 d-inline-flex">
           <img
-            src="assets/icons/lotus-flower-svgrepo-com 1.svg"
+            src="assets/icons/lc logo text 1.png"
             alt="Lotus Cabs"
             class="brand-logo footer-logo"
           />
-          <span class="brand-text text-white">Lotus Cabs</span>
+          <span class="brand-text text-white"></span>
         </a>
 
         <p class="footer-desc">
@@ -521,8 +425,6 @@
             <h6 class="footer-heading">Company</h6>
             <ul class="footer-links">
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Feedback</a></li>
-              <li><a href="#">Coverage</a></li>
             </ul>
           </div>
 
@@ -530,7 +432,6 @@
             <h6 class="footer-heading">Legal</h6>
             <ul class="footer-links">
               <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Feedback</a></li>
             </ul>
           </div>
 

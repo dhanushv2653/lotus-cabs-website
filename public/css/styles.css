@@ -1,7 +1,14 @@
 section {
   scroll-margin-top: 100px;
 }
+.navbar-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
 
+  /* visually crop padding */
+  transform: scale(1.2);
+}
 .card {
   border-radius: 14px;
 }
@@ -35,7 +42,7 @@ h3 {
   width: 282px;
   height: 64px;
 
-  background-color: #013E37; /* bright WhatsApp green */
+  background-color: #C1121F; /* bright WhatsApp green */
   color: #ffffff;
 
   font-size: 18px;
@@ -62,7 +69,7 @@ h3 {
 
 /* hover state */
 .btn-whatsapp:hover {
-  background-color: #1EBE5D; /* slightly darker */
+  background-color: #C1121F; /* slightly darker */
   color: #ffffff;
 
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
@@ -77,8 +84,8 @@ h3 {
   width: 235px;
   height: 62px;
 
-  background-color: #013E37; /* dark green */
-  color: #ffffff;
+  background-color: #E63946; 
+  color: #f8f8f8;
 
   font-size: 18px;
   font-weight: 600;
@@ -98,7 +105,7 @@ h3 {
 
 /* hover → lime WhatsApp green */
 .btn-phone:hover {
-  background-color: #25D366; /* lime green */
+  background-color: #C1121F; /* lime green */
   color: #ffffff;
 
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
@@ -126,7 +133,7 @@ body {
 
 /* Hover state */
 .navbar .nav-link:hover {
-  color: #013e37 !important;
+  color: #E63946 !important;
 }
 .hero-section {
   min-height: 600px;
@@ -136,19 +143,7 @@ body {
 .btn-phone i {
   display: none;
 }
-.google-reviews {
-  display: flex;
-  align-items: center;
-  gap: 16px;                 /* exact Figma gap */
-  margin-top: 25px;
-}
 
-/* Single image asset */
-.google-avatars {
-  height: 54px;              /* from Figma */
-  width: auto;
-  display: block;
-}
 
 /* Text block */
 .review-text {
@@ -194,20 +189,86 @@ body {
   height: 48px;
   display: block;
 }
-
+.brand-note {
+  font-size: 14px;
+  color: #666;
+}
 /* Brand text */
 .brand-text {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 600;
-  color: #013e37;            
+  color: #C1121F;            
   line-height: 1;
   white-space: nowrap;
+}
+.brand-section {
+  padding: 30px 0;
+  overflow: hidden;
+  background: #f8f8f8; /* lighter since client dislikes black */
+}
+
+.brand-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.brand-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: fit-content;
+  animation: scrollBrands 30s linear infinite;
+}
+
+.brand-track img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+/* THIS is the fix */
+@keyframes scrollBrands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.hero-slider {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* Desktop cinematic */
+  max-height: 850px;
+  overflow: hidden;
 }
 
 .hero-section .col-lg-6:last-child {
   display: flex;
   justify-content: flex-end;
+}
+.hero-slider .carousel,
+.hero-slider .carousel-inner,
+.hero-slider .carousel-item {
+  height: 100%;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+.carousel-item:first-child .hero-bg {
+  object-fit: cover;
+  object-position: center 75%;
 }
 /* WHY CHOOSE US */
 .why-choose-us {
@@ -218,8 +279,8 @@ body {
 .why-badge {
   display: inline-block;
   padding: 6px 14px;
-  background: #ECFBE0;
-  color: #000000;
+  background: #E63946;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
   font-size: 122px 24px;
   border-radius: 999px;
@@ -300,7 +361,7 @@ body {
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.75),
-    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.45),
     transparent
   );
 
@@ -325,122 +386,8 @@ body {
   margin: 0;
   opacity: 0.9;
 }
-.customer-stories {
-  padding: 90px 0;
-  background-color: #F9F9F9;
-}
 
-/* Title */
-.customer-stories__title {
-  font-size: clamp(28px, 3vw, 56px);
-  font-weight: 700;
-  color: #023E37;
-}
 
-/* Description */
-.customer-stories__desc {
-  font-size: clamp(10px, 2.5vw, 20px);
-  line-height: 1.7;
-  color: #000000;
-  max-width: 720px;
-}
-
-/* Card */
-.story-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 32px;
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 32px;
-  align-items: center;
-}
-
-/* Image */
-.story-card__image img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-/* Content */
-.story-card__content h4 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.story-card__content p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-/* Author */
-.story-author span {
-  font-size: 14px;
-  color: #6b7280;
-}
-
-/* Highlight */
-.highlight {
-  background: #e8fbd9;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-/* Navigation buttons */
-.story-nav {
-  position: absolute;
-  bottom: 24px;
-
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background-color 0.25s ease;
-}
-
-/* Icon image */
-.story-nav img {
-  width: 18px;
-  height: 18px;
-}
-
-/* Positioning */
-.story-nav--prev {
-  right: 72px;
-}
-
-.story-nav--next {
-  right: 24px;
-}
-
-/* Hover animation */
-.story-nav:hover {
-  background-color: #f3f4f6;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-}
-
-/* Click (active) feel */
-.story-nav:active {
-  transform: translateY(0) scale(0.95);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
 * Section wrapper */
 .choose-car {
   padding: 90px 0;
@@ -575,16 +522,22 @@ body {
   height: 64px;
   padding: 0 26px;
 
-  background-color: #ffffff;
-  color: #013E37;
+  background-color: #F3F4F6;   /* light grey background */
+  color: #444444;              /* dark grey text */
 
   font-size: 16px;
   font-weight: 600;
   border-radius: 10px;
   text-decoration: none;
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
   transition: all 0.25s ease;
+}
+
+.btn-email:hover {
+  background-color: #E5E7EB;   /* slightly darker grey */
+  color: #1A1A1A;
+  transform: translateY(-2px);
 }
 
 .btn-email i {
@@ -596,10 +549,7 @@ body {
   transform: translateY(-2px);
 }
 /* Footer base */
-.site-footer {
-  background-color: #1f2937;
-  padding-top: 80px;
-}
+
 
 /* Top section spacing */
 .footer-top {
@@ -753,7 +703,6 @@ body {
   line-height: 1.4;
   opacity: 0.9;
 }
-<<<<<<< HEAD
 .booking-panel .why-badge {
   font-size: clamp(12px, 1.4vw, 16px);
   padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.4vw, 14px);
@@ -811,15 +760,47 @@ body {
   object-fit: cover;
   display: block;
 }
+.site-footer {
+  background-color: #F4F4F4;  /* light grey */
+  color: #1A1A1A;             /* dark readable text */
+}
 
+/* Logo stays normal */
+.footer-logo {
+  height: clamp(36px, 6vw, 55px);
+  width: auto;
+}
+
+/* Description */
+.footer-desc {
+  color: #333;
+}
+
+/* Contact info */
+.footer-contact {
+  color: #222;
+}
+
+/* Links */
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #E63946;  /* your brand red */
+}
+
+/* Bottom section */
+.footer-bottom {
+  color: #444;
+}
 /* Desktop full stretch */
 @media (min-width: 992px) {
   .booking-image-full {
     height: 600px;
   }
 }
-=======
->>>>>>> a491cc6bce7ef9f96dec6a8eddc51cd620a3e1fa
 @media (min-width: 1200px) {
   .hero-section .container {
     max-width: 1400px;   
@@ -977,6 +958,21 @@ body {
     justify-content: center;
   }
 }
+.footer-logo {
+  height: clamp(36px, 6vw, 55px);
+  width: auto;
+  display: block;
+}
+.site-footer {
+  background-color: #ffff; /* deep executive blue */
+  padding: 60px 0 30px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (max-width: 576px) {
 
   .site-footer {
@@ -1115,7 +1111,6 @@ body {
   .hero-section p {
   font-size: 14px;
 }
-<<<<<<< HEAD
 }
 @media (max-width: 768px) {
 
@@ -1134,6 +1129,29 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-=======
->>>>>>> a491cc6bce7ef9f96dec6a8eddc51cd620a3e1fa
+}
+@media (max-width: 768px) {
+  .hero-slider {
+    aspect-ratio: 4 / 5; /* Taller for mobile */
+ 
+  }
+}
+@media (max-width: 1024px) {
+  .hero-slider {
+    aspect-ratio: 4 / 3;  /* Slightly taller */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-slider {
+    aspect-ratio: 3 / 4;  /* Portrait feel */
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .hero-slider {
+    aspect-ratio: 9 / 16;  /* Full portrait */
+  }
 }
