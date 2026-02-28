@@ -450,6 +450,23 @@ body {
   gap: 6px;
   margin-bottom: 6px;
 }
+.car-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-meta {
+  margin-top: auto;
+}
+.cars-page .choose-car {
+  padding-top: 30px;
+}
 /* Section wrapper */
 .book-ride {
   padding: 90px 0;
