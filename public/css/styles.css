@@ -270,9 +270,62 @@ body {
   object-fit: cover;
   object-position: center 75%;
 }
-/* WHY CHOOSE US */
-.why-choose-us {
-  padding: 80px 0;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.4)
+  );
+  z-index: 1;
+}
+.carousel-caption h1,
+.carousel-caption p {
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+}
+.hero-slider .carousel-item {
+  position: relative;
+}
+.carousel-caption {
+  position: absolute;
+  z-index: 2;   /* 🔥 THIS FIXES IT */
+  bottom: 20%;
+}
+/* Initial hidden state ONLY for first slide */
+.hero-animate .carousel-caption h1,
+.hero-animate .carousel-caption p,
+.hero-animate .carousel-caption a {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Animate ONLY when first slide is active */
+.hero-animate .carousel-caption h1,
+.hero-animate .carousel-caption p,
+.hero-animate .carousel-caption a {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-animate.animate-in .carousel-caption h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.hero-animate.animate-in .carousel-caption p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.hero-animate.animate-in .carousel-caption a {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
 }
 
 /* Badge */
